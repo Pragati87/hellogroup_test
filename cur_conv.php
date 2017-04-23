@@ -1,4 +1,4 @@
-<?php include "/model/config.php";  // including configuration file
+<?php   // including configuration file
 function convert($currency_input,$currency_from,$currency_to){
     $yql_base_url = "http://query.yahooapis.com/v1/public/yql";
     $yql_query = 'select * from yahoo.finance.xchange where pair in ("'.$currency_from.$currency_to.'")';

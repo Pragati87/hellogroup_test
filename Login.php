@@ -12,7 +12,7 @@ if(!!filter_var($myusername, FILTER_VALIDATE_EMAIL) && $mypassword=="magic")
 {
 session_register("myusername");
 $_SESSION['login_user']=$myusername;
-include "/model/config.php";
+include "config.php";
 $sql = 'INSERT INTO `audit` (`User_Email`, `Pages`) VALUES ("'.$myusername.'", "Logged IN");';
 $result = mysql_query($sql);
 header("location: conversion.php");
